@@ -33,7 +33,7 @@ export class AppComponent {
     ms: 0
   }
 
-  startCountdown() {
+  startCount() {
     if (this.isStopped || this.isPaused) {    
       this.isStopped = false
       this.isPaused = false
@@ -53,7 +53,7 @@ export class AppComponent {
     }
   }
 
-  stopCountdown() {
+  stopCount() {
     if (!this.isStopped) {  
       for (let key in this.time) {
         this.time[key] = '00'
@@ -66,7 +66,7 @@ export class AppComponent {
     }
   }
 
-  waitCountdown() {
+  waitCount() {
     if(!this.isStopped) {     
       if (this.isPauseClicked) {        
         if (!this.isPaused) {
@@ -74,7 +74,7 @@ export class AppComponent {
           this.pausedValue = this.date
           this.sub.unsubscribe()
         } else {
-          this.startCountdown()          
+          this.startCount()          
         }
       }
     }
@@ -86,10 +86,10 @@ export class AppComponent {
     }, 300);
   }
 
-  resetCountdown() {
+  resetCount() {
     if (!this.isStopped) {
-      this.stopCountdown()
-      this.startCountdown()      
+      this.stopCount()
+      this.startCount()      
     }
   }
 }
