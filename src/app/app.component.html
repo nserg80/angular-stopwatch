@@ -1,17 +1,1 @@
-<div class="stopwatch">
-  <h1 class="stopwatch__title">{{title}}</h1>
-  <p>Wait - double click within 300mc</p>
-  
-  <div class="stopwatch__value">
-    {{time.hh}}
-    : {{time.mm}}
-    : {{time.ss}}
-  </div>
-
-  <div class="stopwatch__buttons">
-    <button class="stopwatch__btn" (click)="startCount()">Start</button>
-    <button class="stopwatch__btn" (click)="stopCount()">Stop</button>
-    <button class="stopwatch__btn" (click)="waitCount()">Wait</button>
-    <button class="stopwatch__btn" (click)="resetCount()">Reset</button>
-  </div>
-</div>
+<app-stopwatch [stopwatchTitle]="title" ></app-stopwatch>
